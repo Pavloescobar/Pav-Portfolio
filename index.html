@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/normalize.css" />
+    <script src="https://kit.fontawesome.com/2ab2967b45.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="heading-info">
@@ -22,16 +23,48 @@
           </ul>
         </div>
         <div class="desktop-nav">
-          <ul class="menu-list navigation">
-            <li><a href="#home" class="page-scroll">Home</li></a>
+          <!-- <ul class="menu-list navigation"> -->
+            <!-- <li><a href="#home" class="page-scroll">Home</li></a>
               <li><a href="#about" class="page-scroll">About</li></a>
                 <li><a href="#languages" class="page-scroll">Languages</li></a>
-                    <li><a href="#contact" class="page-scroll">Contact</li></a>
+                    <li><a href="#contact" class="page-scroll">Contact</li></a> -->
           </ul>
+        </div>
+        <div class="js-btn">
+          <button class="btn" role="button">Contact Me</button>
+        </div>
+      </div>
+      <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Contact me for any enquiries</h2>
+          <form class="form" id="form" action="">
+            <div class="form-control">
+              <label for="">Name</label>
+              <input type="text" placeholder="Your Name" id="name">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="">Email</label>
+              <input type="text" placeholder="example@email.com" id="email">
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="">Enquiry Details</label>
+              <textarea name="enquiry-details" id="enquiries"></textarea>
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <button>Submit</button>
+          </form>
         </div>
       </div>
       <nav class="main-nav">
-        
         <div class="mobile-icons">
           <a href=""><img src="" alt="" /></a>
           <a href=""><img src="" alt="" /></a>
@@ -50,13 +83,26 @@
           </div>
         </div>
         <div class="floating-icons">
-          <div class="floating-html">
-          </div>
+          <div class="floating-html"></div>
           <div class="floating-html floating-css"></div>
           <div id="floating" class="floating-html floating-js"></div>
+          <div class="floating-html floating-ecomm">E-Commerce</div>
+          <div class="floating-html floating-email-marketing">
+            Email Marketing
+          </div>
+          <div class="static static-linkedin">
+            <a href="https://uk.linkedin.com/in/pavan-bhatt-2192aa163"
+              ><img src="../img/linkedin.png" alt="linked-in"
+            /></a>
+          </div>
+          <div class="static static-github">
+            <a href="https://github.com/Pavloescobar"
+              ><img src="../img/github.png" alt="github"
+            /></a>
+          </div>
         </div>
       </div>
-      
+
       <div class="body-blurb">
         <h1>👋 Hi, I'm Pavan</h1>
         <p>
@@ -68,61 +114,59 @@
       </div>
       <div class="profile-contact-info">
         <div class="profile-contact-current-job">
-        <p>I am always open for Opportunities</p>
-        <p>Currently I am working for <a href="">Klaviyo</a></p>
+          <p>I am always open for Opportunities</p>
+          <p>Currently I am working for <a href="">Klaviyo</a></p>
+        </div>
+        <div class="profile-contact-my-info">
+          <p>Pavan Bhatt</p>
+          <a href="">example@email.com</a>
+        </div>
       </div>
-      <div class="profile-contact-my-info">
-        <p>Pavan Bhatt</p>
-        <a href="">example@email.com</a>
-      </div>
-    
-  </div>
       <div class="recent-project-txt">
         <p>👇 Check out my recent projects</p>
       </div>
-    
     </section>
     <section class="projects">
-    <div class="project1">
-      <div class="project1-text">
-        <h4>Project 1</h4>
-        <h3>Project Name</h3>
-        <p>Project Description</p>
-        <div>
-          <img
-            src="https://www.multimediasolutions.com/media/102990/website-design.jpg?anchor=center&mode=crop&width=940&height=432&rnd=131964461010000000"
-            alt=""
-          />
+      <div class="project1">
+        <div class="project1-text">
+          <h4>Project 1</h4>
+          <h3>Project Name</h3>
+          <p>Project Description</p>
+          <div>
+            <img
+              src="https://www.multimediasolutions.com/media/102990/website-design.jpg?anchor=center&mode=crop&width=940&height=432&rnd=131964461010000000"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="project1 project2">
-      <div class="project1-text">
-        <h4>Project 2</h4>
-        <h3>Project Name</h3>
-        <p>Project Description</p>
-        <div>
-          <img
-            src="https://www.multimediasolutions.com/media/102990/website-design.jpg?anchor=center&mode=crop&width=940&height=432&rnd=131964461010000000"
-            alt=""
-          />
+      <div class="project1 project2">
+        <div class="project1-text">
+          <h4>Project 2</h4>
+          <h3>Project Name</h3>
+          <p>Project Description</p>
+          <div>
+            <img
+              src="https://www.multimediasolutions.com/media/102990/website-design.jpg?anchor=center&mode=crop&width=940&height=432&rnd=131964461010000000"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="project1 project3">
-      <div class="project1-text">
-        <h4>Project 3</h4>
-        <h3>Project Name</h3>
-        <p>Project Description</p>
-        <div>
-          <img
-            src="https://www.multimediasolutions.com/media/102990/website-design.jpg?anchor=center&mode=crop&width=940&height=432&rnd=131964461010000000"
-            alt=""
-          />
+      <div class="project1 project3">
+        <div class="project1-text">
+          <h4>Project 3</h4>
+          <h3>Project Name</h3>
+          <p>Project Description</p>
+          <div>
+            <img
+              src="https://www.multimediasolutions.com/media/102990/website-design.jpg?anchor=center&mode=crop&width=940&height=432&rnd=131964461010000000"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
     <!-- <section class="contact">
       This is a test section 
     </section>
@@ -135,8 +179,7 @@
         <div><p>Pavan Bhatt</p></div>
         <div>Pavan_1994@hotmail.co.uk</div>
       </div>
-      <div class="footer-icons"><img src="" alt="" /><img src="" alt="" />
-      </div>
+      <div class="footer-icons"><img src="" alt="" /><img src="" alt="" /></div>
     </footer>
     <script src="my-js.js"></script>
   </body>
