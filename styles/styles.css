@@ -105,6 +105,11 @@ ul li {
   display: none;
 }
 
+.profile-contact-info a {
+  text-decoration: none;
+  color: #af48ff;
+}
+
 .body-blurb {
   margin: 10px 40px;
   text-align: left;
