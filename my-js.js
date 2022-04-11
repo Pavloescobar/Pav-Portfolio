@@ -53,6 +53,12 @@ function checkInputs() {
   } else {
     setSuccessFor(enquiry);
   }
+  // if (
+  //   div.classList.contains(form - control) &&
+  //   div.classList.contains(success)
+  // ) {
+  //   console.log("well done!");
+  // }
 }
 
 function setErrorFor(input, message) {
