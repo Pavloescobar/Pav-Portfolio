@@ -443,10 +443,11 @@ footer {
     left: 30%;
     width: 40%;
     padding: 20px;
-    border-radius: 5px;
-    border-width: 6px;
-    border-style: solid;
-    border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%;
+    border-radius: 3px;
+    border: 10px solid;
+    border-image: linear-gradient(to left, #743ad5, #d53a9d);
+    border-image-slice: 1;
+    border-width: 5px;
     margin: 0 auto;
   }
 
@@ -520,7 +521,6 @@ footer {
   }
 
   .modal-content h2 {
-    background-color: #f7f7f7;
     padding: 20px 40px;
     border-bottom: 1px solid #f0f0f0;
     margin: 15px 0;
