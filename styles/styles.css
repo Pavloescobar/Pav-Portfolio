@@ -200,6 +200,14 @@ footer {
   margin: 20px auto 50px auto;
 }
 
+.js-btn {
+  display: none;
+}
+
+.modal {
+  display: none;
+}
+
 /********* MEDIA QUERY *********/
 
 @media (min-width: 1025px) {
@@ -597,5 +605,8 @@ footer {
     background-color: rgba(25, 25, 46, 0.15);
     color: black;
     cursor: pointer;
+  }
+  .js-btn {
+    display: block;
   }
 }
