@@ -206,12 +206,193 @@ footer {
   margin: 20px auto 50px auto;
 }
 
-.js-btn {
-  display: none;
+.btn {
+  align-items: center;
+  background-color: #f4eefb;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #af48ff;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 24px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+
+  margin: 0 auto;
+}
+.btn:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 24px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.btn:hover:after {
+  transform: translate(0, 0);
+}
+
+.btn:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.btn:hover {
+  outline: 0;
 }
 
 .modal {
   display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: white;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  padding: 20px;
+  border-radius: 3px;
+  border: 10px solid;
+  border-image: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-slice: 1;
+  border-width: 5px;
+  margin: 0 auto;
+}
+
+.close {
+  color: Black;
+  float: right;
+}
+
+.close:hover {
+  color: purple;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 40px;
+}
+
+.modal-content h2 {
+  padding: 20px 40px;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control textarea {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+textarea {
+  height: 70px;
+}
+
+.form-control i {
+  position: absolute;
+  top: 35px;
+  right: -10px;
+  visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form button {
+  background-color: #8e44ad;
+  border: 2px solid #8e44ad;
+  color: #fff;
+  display: block;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.form button:hover {
+  background-color: rgba(25, 25, 46, 0.15);
+  color: black;
+  cursor: pointer;
 }
 
 /********* MEDIA QUERY *********/
@@ -285,7 +466,7 @@ footer {
   .projects {
     display: flex;
     flex-direction: row;
-    margin: 20px 0 40px 0;
+    margin: 40px 0 40px 0;
     align-items: center;
   }
 
@@ -425,42 +606,6 @@ footer {
     background-color: #e4eef7;
   }
 
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.25);
-    max-height: 100%;
-    overflow: hidden;
-  }
-
-  .modal-content {
-    background-color: white;
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    width: 40%;
-    padding: 20px;
-    border-radius: 3px;
-    border: 10px solid;
-    border-image: linear-gradient(to left, #743ad5, #d53a9d);
-    border-image-slice: 1;
-    border-width: 5px;
-    margin: 0 auto;
-  }
-
-  .close {
-    color: Black;
-    float: right;
-  }
-
-  .close:hover {
-    color: purple;
-    cursor: pointer;
-  }
-
   .btn {
     align-items: center;
     background-color: #f4eefb;
@@ -511,111 +656,5 @@ footer {
 
   .btn:hover {
     outline: 0;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px 40px;
-  }
-
-  .modal-content h2 {
-    padding: 20px 40px;
-    border-bottom: 1px solid #f0f0f0;
-    margin: 15px 0;
-    overflow: hidden;
-  }
-
-  .form-control {
-    margin-bottom: 10px;
-    padding-bottom: 25px;
-    position: relative;
-  }
-
-  .form-control label {
-    display: inline-block;
-    margin-bottom: 5px;
-  }
-
-  .form-control input {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    font-family: inherit;
-  }
-
-  .form-control.success input {
-    border-color: #2ecc71;
-  }
-
-  .form-control.error input {
-    border-color: #e74c3c;
-  }
-
-  .form-control textarea {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    font-family: inherit;
-  }
-
-  textarea {
-    height: 70px;
-  }
-
-  .form-control i {
-    position: absolute;
-    top: 35px;
-    right: -10px;
-    visibility: hidden;
-  }
-
-  .form-control.success i.fa-check-circle {
-    visibility: visible;
-    color: #2ecc71;
-  }
-
-  .form-control.error i.fa-exclamation-circle {
-    color: #e74c3c;
-    visibility: visible;
-  }
-
-  .form-control small {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
-  }
-
-  .form-control.error small {
-    visibility: visible;
-    color: #e74c3c;
-  }
-
-  .form button {
-    background-color: #8e44ad;
-    border: 2px solid #8e44ad;
-    color: #fff;
-    display: block;
-    border-radius: 4px;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .form button:hover {
-    background-color: rgba(25, 25, 46, 0.15);
-    color: black;
-    cursor: pointer;
-  }
-  .js-btn {
-    display: block;
   }
 }
