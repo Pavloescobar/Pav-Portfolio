@@ -74,3 +74,13 @@ function isEmail(email) {
     email
   );
 }
+
+const counter = document.getElementById("count");
+
+function updateVisitCount() {
+  fetch("https://api.countapi.xyz/update/Portfolio/pavfolio/?amount=1")
+    .then((res) => res.json())
+    .then((res) => {
+      counter.innerHTML = res.value;
+    });
+}

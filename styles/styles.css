@@ -183,8 +183,16 @@ footer {
 .footer-bio {
   display: flex;
   justify-content: space-between;
-  margin: 0 35px;
+  margin: 15px 35px;
   align-items: center;
+  font-size: 12px;
+  color: #5e87a8;
+}
+
+footer p {
+  display: block;
+  text-align: center;
+  margin: 5px auto;
   font-size: 12px;
   color: #5e87a8;
 }
