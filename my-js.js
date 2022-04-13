@@ -75,12 +75,14 @@ function isEmail(email) {
   );
 }
 
-const counter = document.getElementById("count");
+const countEl = document.getElementById("count");
+
+updateVisitCount();
 
 function updateVisitCount() {
   fetch("https://api.countapi.xyz/update/Portfolio/pavfolio/?amount=1")
     .then((res) => res.json())
     .then((res) => {
-      counter.innerHTML = res.value;
+      countEl.innerHTML = res.value;
     });
 }
